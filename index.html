@@ -15,7 +15,6 @@
 </head>
 <body>
 
-
 <header>
   <h1>Minha Loja 1.0</h1>
 </header>
@@ -33,13 +32,13 @@
     </div>  
     
     <div class="lineInput">
-      <label>valor</label>
-      <input type="text" id="valor" placeholder="Valor do produto">
+      <label>Preço</label>
+      <input type="text" id="preco" placeholder="Valor do produto">
     </div>      
 
 
-    <button onclick="produto.adicionar()">Adicionar</button>
-    <button onclick="produto.excluir()">Deletar</button>  
+    <button onclick="produto.salvar()">Salvar</button>
+    <button onclick="produto.cancelar()">Cancelar</button>  
 
   </div>
 
@@ -53,35 +52,8 @@
         <th class="center">Ações</th>
       </thead>
 
-      <tbody>
-        <tr> <!-- linhas da tabelas-->
-          <td>1</td> <!-- colunas da tabelas -->
-          <td>mesa da sala de estar</td>
-          <td>1900</td>
-          <td class="center">
-            <img src="img/edit.png" alt="">
-            <img src="img/delete.png" alt="">
-          </td>
-        </tr>
-      
-        <tr>
-          <td>1</td>
-          <td>mesa da sala de estar</td>
-          <td>1900</td>
-          <td class="center">
-            <img src="img/edit.png" alt="">
-            <img src="img/delete.png" alt="">
-          </td>
-        </tr>
-      
-      
-      
-      
-      
-      
-      
-      
-      
+      <tbody id="tbody">
+           
       
       
       </tbody>
