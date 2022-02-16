@@ -14,6 +14,7 @@ salvar(){
   // console.log(this.arrayProdutos)
   
   this.listaTabela();
+  this.cancelar();
 
 }
 
@@ -34,8 +35,16 @@ listaTabela(){
     td_produto.innerText = this.arrayProdutos[i].nomeProduto;
     td_valor.innerText = this.arrayProdutos[i].preco;
 
+    td_id.classList.add('center');
 
+    let imgEdit = document.createElement('img');
+    imgEdit.src = 'img/edit.png';
 
+    let imgDelete = document.createElement('img');
+    imgDelete.src = 'img/delete.png';
+
+    td_acoes.appendChild(imgEdit);
+    td_acoes.appendChild(imgDelete);
 
   }
 
@@ -44,8 +53,6 @@ listaTabela(){
 adicionar(produto){
   this.arrayProdutos.push(produto);
   this.id++;
-
-
 }
 
 lerDados(){
@@ -53,9 +60,7 @@ lerDados(){
   produto.id = this.id;
   produto.nomeProduto = document.getElementById('produto').value;
   produto.preco = document.getElementById('preco').value;
-  return produto;
-
-  
+  return produto;  
 }
 
 validaCampos(produto){
@@ -79,7 +84,8 @@ validaCampos(produto){
 
 
 cancelar(){
-
+  document.getElementById('produto').value ='';
+  document.getElementById('preco').value = '';
 }
 
 
